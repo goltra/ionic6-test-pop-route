@@ -14,8 +14,15 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-item>
+    <ion-button (click)="abrirTest()">TEST</ion-button>
+  </ion-item>
+  <ion-item (click)="edit()" *ngFor="let o of data; let i=index; trackBy: trackBy">
+    {{o._id}} - {{o.name}}
+  </ion-item>
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
   </div>
 </ion-content>
